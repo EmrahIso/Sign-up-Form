@@ -1,0 +1,14 @@
+{
+  "name": "sign-up-form",
+  "version": "1.0.0",
+  "description": "One of the The Odin project projects from the Intermediate HTML and CSS course to practice HTML Forms and form validation with CSS styling.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch --no-source-map ./src/scss/main.scss ./src/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.6"
+  }
+}
