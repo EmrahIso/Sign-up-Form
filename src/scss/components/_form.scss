@@ -1,0 +1,34 @@
+@use "../utilities";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: utilities.toRem(20);
+
+    &__label {
+        color: utilities.$color-marine-blue;
+
+        padding: 0;
+    }
+
+    &__input {
+        border: 1px solid utilities.$light-gray;
+        border-radius: utilities.toRem(12);
+
+        background-color: transparent;
+
+        display: inline-block;
+        height: auto;
+        padding: utilities.toRem(12);
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-family: utilities.$medium-font;
+
+            color: utilities.$cool-gray;
+        }
+    }
+}
