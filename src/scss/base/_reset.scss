@@ -22,15 +22,16 @@ table {
 }
       
 th, td {
-    padding: 0.25rem;
     text-align: left;
+    
+    padding: 0.25rem;
     border: 1px solid #ccc;
 }
       
   
 input, button, textarea, select, label {
     font: inherit;
-    font-size: clamp(16px, 1rem, 2rem);
+    font-size: max(16px, 1rem);
 /* !Never set font-size less than 16px on these elements because of mobile zooming */
 }
   
@@ -48,4 +49,8 @@ meter {
   
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
 }

@@ -3,31 +3,64 @@
 @use "../utilities";
 
 @font-face {
-    font-family: 'ubunturegular';
-    src: url('../../../assets/fonts/ubuntu-regular-webfont.woff2') format('woff2'),
-         url('../../../assets/fonts/ubuntu-regular-webfont.woff') format('woff');
+    font-family: 'rubikmedium';
+    src: url('../../../assets/fonts/rubik_font/rubik-medium-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/rubik_font/rubik-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'rubiklight';
+    src: url('../../../assets/fonts/rubik_font/rubik-light-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/rubik_font/rubik-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('../../../assets/fonts/ubuntu_font/ubuntu-regular-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/ubuntu_font/ubuntu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'ubuntumedium';
-    src: url('../../../assets/fonts/ubuntu-medium-webfont.woff2') format('woff2'),
-         url('../../../assets/fonts/ubuntu-medium-webfont.woff') format('woff');
+    src: url('../../../assets/fonts/ubuntu_font/ubuntu-medium-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/ubuntu_font/ubuntu-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'ubuntubold';
-    src: url('../../../assets/fonts/ubuntu-bold-webfont.woff2') format('woff2'),
-         url('../../../assets/fonts/ubuntu-bold-webfont.woff') format('woff');
+    src: url('../../../assets/fonts/ubuntu_font/ubuntu-bold-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/ubuntu_font/ubuntu-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: utilities.$regularFont;
+    font-family: utilities.$regular-font;
+}
+
+.main-heading {
+    font-family: utilities.$medium-heading-font;
+    font-size: utilities.toRem(30);
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    margin-top: utilities.toRem(20);
+
+    color: utilities.$white;
+
+    @include utilities.respond-to("extra-large") {
+        font-size: max(utilities.toRem(24), 3vw);
+    }
+
+    span {
+        font-family: utilities.$light-heading-font;
+    }
 }
