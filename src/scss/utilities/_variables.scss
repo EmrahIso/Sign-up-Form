@@ -1,5 +1,13 @@
 // Fonts
 
-$regularFont: "ubunturegular";
-$mediumFont: "ubuntumedium";
-$boldFont: "ubuntubold";
+$regular-font: "ubunturegular";
+$medium-font: "ubuntumedium";
+$bold-font: "ubuntubold";
+
+$light-heading-font: "rubiklight";
+$medium-heading-font: "rubikmedium";
+
+// Shadows
+
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
