@@ -7,6 +7,38 @@
     <title>Sign-up Form</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <main class="main">
+        <aside class="aside">
+            <h1 class="main-heading"><span>Wellcome to the</span> <br> Odin Form!</h1>
+            <img src="./assets/images/odin.png" alt="The Odin Project Logo">
+        </aside>
+        <article>
+            <section>
+                <h2>Personal info</h2>
+                <p>Required fields are marked with (<strong><span aria-label="required">*</span></strong>).</p>
+            </section>
+            <form action="#" class="form">
+                <div>
+                    <label for="full-name" class="form__label">Name</label>
+                    <input type="text" id="full-name" name="full-name" class="form__input form__input--text" placeholder="e.g. Stephen King">
+                </div>
+                <div>
+                    <label for="email" class="form__label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form__input form__input--email" placeholder="e.g. stephenking@lorem.com">
+                </div>
+                <div>
+                    <label for="pwd" class="form__label">Password</label>
+                    <input type="password" id="pwd" name="pwd" class="form__input form__input--password">
+                </div>
+                <div>
+                    <label for="confirm-pwd" class="form__label">Confirm Password</label>
+                    <input type="password" id="confirm-pwd" name="confirm-pwd" class="form__input form__input--password">
+                </div>
+                <div class="button__cont">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </article>
+    </main>
 </body>
 </html>
