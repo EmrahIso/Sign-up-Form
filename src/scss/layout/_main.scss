@@ -1,0 +1,76 @@
+@use "../utilities";
+
+.main {
+    width: min(utilities.toRem(1200), 80vw);
+    height: min(utilities.toRem(700), 80vh);
+    border-radius: utilities.toRem(24);
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: utilities.toRem(20);
+    
+    background-color: utilities.$alabaster;
+    box-shadow: utilities.$shadow-light;
+
+    display: grid;
+    grid-template-columns: 30% 1fr;
+
+    @include utilities.respond-to("extra-large") {
+        width: min(utilities.toRem(1200), 90vw); 
+        
+        grid-template-columns: 35% 1fr;      
+    }
+
+    article {
+        padding: utilities.toRem(36) utilities.toRem(80) 0 utilities.toRem(100);
+
+        section {
+            padding-bottom: utilities.toRem(35);
+
+            h2 {
+                font-size: utilities.toRem(36);
+                font-family: utilities.$bold-font;
+                letter-spacing: 0.5px;
+    
+                padding-bottom: utilities.toRem(10);
+    
+                color: utilities.$color-marine-blue;
+            }
+    
+            p {
+                color: utilities.$cool-gray;
+            }
+        }
+    }
+
+    aside {
+        border-radius: utilities.toRem(12);
+
+        background-image: url('../../../assets/images/bg-sidebar-desktop.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        position: relative;
+
+        padding: utilities.toRem(20);
+
+        @include utilities.respond-to("extra-large") {
+            padding: utilities.toRem(16);            
+        }
+
+        img {
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include utilities.respond-to("extra-large") {
+                width: 55%;
+            }
+        }
+    }
+
+}
