@@ -2,13 +2,9 @@
 
 .main {
     width: min(utilities.toRem(1200), 80vw);
-    height: min(utilities.toRem(700), 80vh);
     border-radius: utilities.toRem(24);
 
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: utilities.toRem(20);
     
     background-color: utilities.$alabaster;
@@ -39,9 +35,9 @@
                 color: utilities.$color-marine-blue;
             }
     
-            p {
-                color: utilities.$cool-gray;
-            }
+        }
+        p {
+            color: utilities.$cool-gray;
         }
     }
 
