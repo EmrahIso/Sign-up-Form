@@ -1,2 +1,35 @@
 @use "../utilities";
 
+.button {
+    font-family: utilities.$medium-font;  
+    letter-spacing: 0.25px;
+
+    color: utilities.$white;
+    background-color: utilities.$color-marine-blue;
+
+    border: none;
+    border-radius: utilities.toRem(12);
+    
+    height: auto;
+    width: auto;
+    padding: utilities.toRem(12) utilities.toRem(24);
+    cursor: pointer;
+
+    transition: all .15s;
+
+    &:hover {
+        background-color: utilities.$purplish-blue;
+    }
+
+    &:active {
+        background-color: utilities.$color-marine-blue-dark;
+    }
+
+    &__cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: utilities.toRem(20);
+        margin-top: utilities.toRem(50);
+    }
+}
