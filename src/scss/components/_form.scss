@@ -1,6 +1,7 @@
 @use "../utilities";
 
 .form {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: utilities.toRem(20);
@@ -19,9 +20,10 @@
 
         display: inline-block;
         height: auto;
-        padding: utilities.toRem(12);
+        padding:  utilities.toRem(12);
 
         &:focus {
+            border-color: utilities.$purplish-blue;
             outline: none;
         }
 
@@ -30,5 +32,36 @@
 
             color: utilities.$cool-gray;
         }
+
+        &:invalid {
+            & + span {
+                &::before {
+                    content: "Invalid Value - This field is required";
+                    color: utilities.$strawberry-red;
+                }
+            }
+        }
+
+        & + span {
+            position: relative;
+    
+            &::before {
+                content: "This field is required";
+                position: absolute;
+                top: -55%;
+                right: 0;
+    
+                text-wrap: nowrap;
+                font-family: utilities.$medium-font;
+                font-size: max(14px, utilities.toRem(14));
+                
+                color: utilities.$color-marine-blue;
+            }
+        }
+    }
+
+    & > div:not(:last-child) {
+        display: flex;
+        flex-flow: row  wrap;
     }
 }
