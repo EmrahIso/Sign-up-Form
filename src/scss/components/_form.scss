@@ -10,6 +10,11 @@
         color: utilities.$color-marine-blue;
 
         padding: 0;
+
+        @include utilities.respond-to("small") {
+            font-size: utilities.toRem(16);
+            height: 25px;
+        }
     }
 
     &__input {
@@ -36,8 +41,12 @@
         &:invalid {
             & + span {
                 &::before {
-                    content: "Invalid Value - This field is required";
+                    content: "Invalid Value (required)";
                     color: utilities.$strawberry-red;
+
+                    @include utilities.respond-to("small") {
+                        content: "Invalid (required)";
+                    }
                 }
             }
         }
@@ -54,8 +63,12 @@
                 text-wrap: nowrap;
                 font-family: utilities.$medium-font;
                 font-size: max(14px, utilities.toRem(14));
-                
                 color: utilities.$color-marine-blue;
+
+                @include utilities.respond-to("small") {
+                    font-size: utilities.toRem(14);
+                    top: -50%;
+                }
             }
         }
     }

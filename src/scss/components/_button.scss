@@ -17,6 +17,10 @@
 
     transition: all .15s;
 
+    @include utilities.respond-to("large") {
+        border-radius: utilities.toRem(8);
+    }
+
     &:hover {
         background-color: utilities.$purplish-blue;
     }
@@ -27,9 +31,21 @@
 
     &__cont {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
-        gap: utilities.toRem(20);
         margin-top: utilities.toRem(50);
+
+        @include utilities.respond-to("large") {
+            position: fixed;
+            bottom: 0;
+            left: 0;  
+
+            margin-top: 0;
+            padding: utilities.toRem(18);
+            width: 100%;
+
+            box-shadow: utilities.$shadow-light-top;
+            background-color: utilities.$alabaster;
+        }
     }
 }

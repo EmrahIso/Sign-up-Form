@@ -8,7 +8,7 @@
     padding: utilities.toRem(20);
     
     background-color: utilities.$alabaster;
-    box-shadow: utilities.$shadow-light;
+    box-shadow: utilities.$shadow-light-bottom;
 
     display: grid;
     grid-template-columns: 30% 1fr;
@@ -19,8 +19,32 @@
         grid-template-columns: 35% 1fr;      
     }
 
+    @include utilities.respond-to("large") {
+        position: static;
+        width: min(utilities.toRem(600), 90vw);
+        grid-template-columns: 1fr;
+
+        margin-bottom: utilities.toRem(85);
+    }
+
+    @include utilities.respond-to("small") {
+        padding: utilities.toRem(16);
+    }
+
     article {
         padding: utilities.toRem(36) utilities.toRem(80) 0 utilities.toRem(100);
+
+        @include utilities.respond-to("extra-large") {
+            padding: utilities.toRem(36) utilities.toRem(50) 0 utilities.toRem(70);
+        }
+
+        @include utilities.respond-to("large") {
+            padding: utilities.toRem(18) utilities.toRem(16) utilities.toRem(18) utilities.toRem(16);
+        }
+
+        @include utilities.respond-to("small") {
+            padding: utilities.toRem(12);
+        }
 
         section {
             padding-bottom: utilities.toRem(35);
@@ -33,18 +57,35 @@
                 padding-bottom: utilities.toRem(10);
     
                 color: utilities.$color-marine-blue;
+
+                @include utilities.respond-to("medium") {
+                    font-size: utilities.toRem(32);
+                    padding-bottom: utilities.toRem(8);
+                }
+
+                @include utilities.respond-to("small") {
+                    letter-spacing: 0;
+                }            
             }
     
         }
         p {
             color: utilities.$cool-gray;
+
+            @include utilities.respond-to("extra-large") {
+                font-size: utilities.toRem(15);
+            }
+
+            @include utilities.respond-to("medium") {
+                font-size: utilities.toRem(16);
+            }
         }
     }
 
     aside {
         border-radius: utilities.toRem(12);
 
-        background-image: url('../../../assets/images/bg-sidebar-desktop.svg');
+        background-image: url('../../assets/images/bg-sidebar-desktop.svg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -56,6 +97,20 @@
             padding: utilities.toRem(16);            
         }
 
+        @include utilities.respond-to("large") {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            
+            width: 100vw;
+
+            padding: utilities.toRem(128) 0;
+            border-radius: 0;
+            background-image: url('../../assets/images/bg-sidebar-mobile.svg');
+            background-size: cover 50%;
+        }
+
         img {
             width: 60%;
             position: absolute;
@@ -65,6 +120,10 @@
 
             @include utilities.respond-to("extra-large") {
                 width: 55%;
+            }
+
+            @include utilities.respond-to("large") {
+                display: none;
             }
         }
     }
