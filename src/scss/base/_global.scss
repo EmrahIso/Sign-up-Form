@@ -2,6 +2,14 @@
 
 html {
     overflow-x: hidden;
+
+    @include utilities.respond-to("medium") {
+        font-size: 93.75%; // Instead of 16px, 1rem will now be 15px (This will make responsiveness of the web page easier to develop.)
+    }
+
+    @include utilities.respond-to("extra-small") {
+        font-size: 87.5%; // 14px
+    }
 }
 
 body {
@@ -13,4 +21,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include utilities.respond-to("large") {
+        padding: utilities.toRem(128) 0 utilities.toRem(64) 0;
+        align-items: flex-start;
+    }
 }
