@@ -4,9 +4,10 @@
   "description": "One of the The Odin project projects from the Intermediate HTML and CSS course to practice HTML Forms and form validation with CSS styling.",
   "main": "index.js",
   "scripts": {
-    "compile": "sass --watch --no-source-map ./src/scss/main.scss ./src/css/style.css"
+    "compile": "sass --watch --no-source-map ./src/scss/main.scss ./src/css/style.css",
+    "compress": "sass --no-source-map --style=compressed ./src/scss/main.scss ./src/css/style.css"
   },
-  "author": "",
+  "author": "Emrah Isovic",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.77.6"

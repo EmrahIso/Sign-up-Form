@@ -70,7 +70,7 @@
     
         }
         p {
-            color: utilities.$cool-gray;
+            color: utilities.$dark-gray;
 
             @include utilities.respond-to("extra-large") {
                 font-size: utilities.toRem(15);
